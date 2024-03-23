@@ -1,46 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Mar 23 09:07:20 2024
+Created on Sat Mar 23 16:00:12 2024
 
-@author: jim
+@author: caplinje
 
-Blank dash project for testing hash.md5 swap with hash.sha256
-
+Basic callback dashboard from:
+https://dash.plotly.com/basic-callbacks
+Modified to allow duplicate callbacks, which forces callbacks to use hash.md5
+and therefore fails in a properly configured FIPS environment
 """
 
+from dash import Dash, dcc, html, Input, Output, callback
 
-from dash import Dash, dcc, html, Input, Output
-import hashlib
 
-def create_callback_id(output, inputs):
-    print('patched method called')
-    # A single dot within a dict id key or value is OK
-    # but in case of multiple dots together escape each dot
-    # with `\` so we don't mistake it for multi-outputs
-    hashed_inputs = None
-
-    def _concat(x):
-        nonlocal hashed_inputs
-        _id = x.component_id_str().replace(".", "\\.") + "." + x.component_property
-        if x.allow_duplicate:
-            if not hashed_inputs:
-                hashed_inputs = hashlib.sha256(
-                    ".".join(str(x) for x in inputs).encode("utf-8")
-                ).hexdigest()
-            # Actually adds on the property part.
-            _id += f"@{hashed_inputs}"
-        return _id
-
-    if isinstance(output, (list, tuple)):
-        return ".." + "...".join(_concat(x) for x in output) + ".."
-
-    return _concat(output)
-
-import dash
-dash._callback.create_callback_id = create_callback_id
-callback = dash.callback
-
-app = Dash(__name__,prevent_initial_callbacks=True)
 
 app.layout = html.Div([
     html.H6("Change the value in the text box to see callbacks in action!"),
