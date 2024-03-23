@@ -9,7 +9,7 @@ Blank dash project for testing hash.md5 swap with hash.sha256
 """
 
 
-import dash
+from dash import Dash, dcc, html, callback, Input, Output
 import hashlib
 
 def create_callback_id(output, inputs):
@@ -35,10 +35,8 @@ def create_callback_id(output, inputs):
 
     return _concat(output)
 
-dash._utils.create_callback_id = create_callback_id
 
-Dash = dash.Dash
-dcc, html, Input, Output, callback = dash.dcc, dash.html, dash.Input, dash.Output, dash.callback
+callback.create_callback_id = create_callback_id
 
 app = Dash(__name__,prevent_initial_callbacks=True)
 
