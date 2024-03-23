@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "locale": "English_United States.1252",
+  "metadata": {
+    "appmode": "python-dash",
+    "entrypoint": "main"
+  },
+  "python": {
+    "version": "3.11.5",
+    "package_manager": {
+      "name": "pip",
+      "version": "23.3",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "ff9efe808ebf6d097d5db19c8d6cd818"
+    },
+    ".spyproject/config/codestyle.ini": {
+      "checksum": "de8a66cdc6940773667c18ef547a3c09"
+    },
+    ".spyproject/config/defaults/defaults-codestyle-0.2.0.ini": {
+      "checksum": "af6a1f6a1a62a6c37ca62f901d9e89ee"
+    },
+    ".spyproject/config/defaults/defaults-encoding-0.2.0.ini": {
+      "checksum": "650d74483ce6734b72719b7fa4a5d28d"
+    },
+    ".spyproject/config/defaults/defaults-vcs-0.2.0.ini": {
+      "checksum": "b1abf45d196f109529f667dd556bfbe6"
+    },
+    ".spyproject/config/defaults/defaults-workspace-0.2.0.ini": {
+      "checksum": "e9c02b5965a89c2b5dbc2b24a0c42f6d"
+    },
+    ".spyproject/config/encoding.ini": {
+      "checksum": "efd70e7a3292196e011a019dfe3edae2"
+    },
+    ".spyproject/config/vcs.ini": {
+      "checksum": "99fdb6058c7677bb609aeecabcd8dd0f"
+    },
+    ".spyproject/config/workspace.ini": {
+      "checksum": "96af374bfe1f7458d74613e9b41b178f"
+    },
+    "main.py": {
+      "checksum": "e03aded405657d40a9267f79bd77a433"
+    }
+  }
+}
