@@ -8,7 +8,37 @@ Blank dash project for testing hash.md5 swap with hash.sha256
 
 """
 
-from dash import Dash, dcc, html, Input, Output, callback
+import hashlib
+import dash
+
+def create_callback_id(output, inputs):
+    # A single dot within a dict id key or value is OK
+    # but in case of multiple dots together escape each dot
+    # with `\` so we don't mistake it for multi-outputs
+    hashed_inputs = None
+
+    def _concat(x):
+        nonlocal hashed_inputs
+        _id = x.component_id_str().replace(".", "\\.") + "." + x.component_property
+        if x.allow_duplicate:
+            if not hashed_inputs:
+                hashed_inputs = hashlib.sha256(
+                    ".".join(str(x) for x in inputs).encode("utf-8")
+                ).hexdigest()
+            # Actually adds on the property part.
+            _id += f"@{hashed_inputs}"
+        return _id
+
+    if isinstance(output, (list, tuple)):
+        return ".." + "...".join(_concat(x) for x in output) + ".."
+
+    return _concat(output)
+
+dash._utils.create_callback_id = create_callback_id
+
+Dash = dash.Dash
+
+from dash import dcc, html, Input, Output, callback
 
 app = Dash(__name__)
 
