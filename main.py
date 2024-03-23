@@ -9,10 +9,11 @@ Blank dash project for testing hash.md5 swap with hash.sha256
 """
 
 
-from dash import Dash, dcc, html, callback, Input, Output
+from dash import Dash, dcc, html, Input, Output
 import hashlib
 
 def create_callback_id(output, inputs):
+    print('patched method called')
     # A single dot within a dict id key or value is OK
     # but in case of multiple dots together escape each dot
     # with `\` so we don't mistake it for multi-outputs
@@ -35,8 +36,9 @@ def create_callback_id(output, inputs):
 
     return _concat(output)
 
-
-callback.create_callback_id = create_callback_id
+import dash
+dash._callback.create_callback_id = create_callback_id
+callback = dash.callback
 
 app = Dash(__name__,prevent_initial_callbacks=True)
 
