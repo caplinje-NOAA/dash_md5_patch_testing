@@ -8,8 +8,9 @@ Blank dash project for testing hash.md5 swap with hash.sha256
 
 """
 
-import hashlib
+from dash import dcc, html, Input, Output, callback
 import dash
+import hashlib
 
 def create_callback_id(output, inputs):
     # A single dot within a dict id key or value is OK
@@ -38,9 +39,8 @@ dash._utils.create_callback_id = create_callback_id
 
 Dash = dash.Dash
 
-from dash import dcc, html, Input, Output, callback
 
-app = Dash(__name__)
+app = Dash(__name__,prevent_initial_callbacks=True)
 
 app.layout = html.Div([
     html.H6("Change the value in the text box to see callbacks in action!"),
@@ -56,8 +56,8 @@ app.layout = html.Div([
 
 @callback(
     Output(component_id='my-output', component_property='children',allow_duplicate=True),
-    Input(component_id='my-input', component_property='value',allow_duplicate=True),
-   
+    Input(component_id='my-input', component_property='value'),
+    prevent_initial_call=True
 )
 def update_output_div(input_value):
     return f'Output: {input_value}'
