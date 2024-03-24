@@ -15,11 +15,12 @@ environment.
 
 from dash import Dash, dcc, html, Input, Output
 import hashlib
+import time
 
 
 ## define method that needs to be overloaded, copied from dash._utils
 def create_callback_id(output, inputs):
-    print('patched method called')
+   
     # A single dot within a dict id key or value is OK
     # but in case of multiple dots together escape each dot
     # with `\` so we don't mistake it for multi-outputs
@@ -30,7 +31,8 @@ def create_callback_id(output, inputs):
         _id = x.component_id_str().replace(".", "\\.") + "." + x.component_property
         if x.allow_duplicate:
             if not hashed_inputs:
-                hashed_inputs = hashlib.blake2b(
+                #print('hash algo called')
+                hashed_inputs = hashlib.sha512(
                     ".".join(str(x) for x in inputs).encode("utf-8")
                 ).hexdigest()
             # Actually adds on the property part.
@@ -46,6 +48,14 @@ def create_callback_id(output, inputs):
 import dash
 dash._callback.create_callback_id = create_callback_id
 callback = dash.callback
+N=10000
+
+def noutputs(n):
+    outs = []
+    for i in range(n):
+        outs.append(html.Div(id=f'my-output-{i}'))
+        
+    return html.Div(outs)
 
 app = Dash(__name__,prevent_initial_callbacks=True)
 
@@ -56,19 +66,30 @@ app.layout = html.Div([
         dcc.Input(id='my-input', value='initial value', type='text')
     ]),
     html.Br(),
-    html.Div(id='my-output'),
+    noutputs(N),
 
 ])
 
+def callbackgen(n):
+    outs = Output(component_id=f'my-output-{n}', component_property='children',allow_duplicate=True)
+    ins = Input(component_id='my-input', component_property='value')
+    @callback(
+        outs,
+        ins,
+        prevent_initial_call=True
+    )
+    def nthCallback(input_value):
+        return f'Output: {input_value}'
+    
+    return nthCallback,outs,ins
 
-@callback(
-    Output(component_id='my-output', component_property='children',allow_duplicate=True),
-    Input(component_id='my-input', component_property='value'),
-    prevent_initial_call=True
-)
-def update_output_div(input_value):
-    return f'Output: {input_value}'
+# register callbacks
+s = time.time()
+for i in range(N):
+    nthCallback,outs,ins = callbackgen(i)
+    #app.callback(output=outs,inputs=ins,prevent_initial_call=True)(nthCallback)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+e = time.time()
+print(f'dt = {e-s} s')
+# if __name__ == '__main__':
+#     app.run(debug=True)
