@@ -1,0 +1,1726 @@
+> test
+
+> pytest && cd dash/dash-renderer && npm run test
+
+
+
+Test session starts (platform: linux, Python 3.10.12, pytest 8.1.1, pytest-sugar 0.9.6)
+
+cachedir: .pytest_cache
+
+rootdir: /home/jim/Documents/dashgit/dash-FIPS
+
+configfile: pytest.ini
+
+testpaths: tests/
+
+plugins: anyio-4.3.0, rerunfailures-14.0, flaky-3.8.1, mock-3.14.0, sugar-0.9.6, dash-2.16.1
+
+collecting ... Skipping celery tests because REDIS_URL is not defined
+
+
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc001_simple_callback ✓0%           
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc002_callbacks_generating_children ✓0%           
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc003_callback_with_unloaded_async_component ✓0% ▏         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc004_callback_using_unloaded_async_component ✓1% ▏         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc005_children_types[json] ✓1% ▏         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc005_children_types[orjson] ✓1% ▏         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc006_array_of_objects[json] ✓1% ▏         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc006_array_of_objects[orjson] ✓1% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc007_parallel_updates[False] ✓1% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc007_parallel_updates[True] ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc008_wildcard_prop_callbacks ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc009_callback_using_unloaded_async_component_and_graph ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc010_event_properties ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc011_one_call_for_multiple_outputs_initial ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc012_one_call_for_multiple_outputs_update ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc013_multi_output_out_of_order ✓2% ▎         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc014_multiple_properties_update_at_same_time_on_same_component ✓3% ▍         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc015_input_output_callback ✓3% ▍         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc016_extra_components_callback ✓3% ▍         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc017_callback_directly_callable ✓3% ▍         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc018_callback_ndarray_output ✓3% ▍         
+
+ tests/integration/callbacks/test_basic_callback.py::test_cbsc019_callback_running ✓3% ▍         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx001_modified_response ✓3% ▍         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx002_triggered ✓4% ▍         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx003_no_callback_context ✓4% ▍         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx004_triggered_backward_compat ✓4% ▌         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx005_grouped_clicks ✓4% ▌         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx006_initial_callback_predecessor ✓4% ▌         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx007_triggered_id ✓4% ▌         
+
+ tests/integration/callbacks/test_callback_context.py::test_cbcx008_triggered_id_pmc ✓5% ▌         
+
+ tests/integration/callbacks/test_dynamic_callback.py::test_dync001_dynamic_callback ✓5% ▌         
+
+ tests/integration/callbacks/test_dynamic_callback.py::test_dync002_dynamic_callback_without_element ✓5% ▌         
+
+ tests/integration/callbacks/test_global_dash_callback.py::test_dash_callback_001 ✓5% ▌         
+
+ tests/integration/callbacks/test_layout_paths_with_callbacks.py::test_cblp001_radio_buttons_callbacks_generating_children ✓5% ▌         
+
+ tests/integration/callbacks/test_malformed_request.py::test_cbmf001_bad_output_outputs ✓5% ▌         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi001_all_missing_inputs ✓5% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi002_follow_on_to_two_skipped_callbacks ✓6% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi003_some_missing_inputs ✓6% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi004_some_missing_outputs ✓6% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi005_all_multi_wildcards_with_output ✓6% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi006_all_multi_wildcards_no_outputs ✓6% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi007_all_multi_wildcards_some_outputs ✓6% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi008_multi_wildcards_and_simple_all_missing ✓7% ▋         
+
+ tests/integration/callbacks/test_missing_inputs.py::test_cbmi009_match_wildcards_all_missing ✓7% ▋         
+
+ tests/integration/callbacks/test_missing_outputs.py::test_cbmo001_all_output[False] ✓7% ▊         
+
+ tests/integration/callbacks/test_missing_outputs.py::test_cbmo001_all_output[True] ✓7% ▊         
+
+ tests/integration/callbacks/test_missing_outputs.py::test_cbmo002_all_and_match_output[False] ✓7% ▊         
+
+ tests/integration/callbacks/test_missing_outputs.py::test_cbmo002_all_and_match_output[True] ✓7% ▊         
+
+ tests/integration/callbacks/test_missing_outputs.py::test_cbmo003_multi_all ✓7% ▊         
+
+ tests/integration/callbacks/test_missing_outputs.py::test_cbmo004_removing_element_while_waiting_to_update ✓8% ▊         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt001_called_multiple_times_and_out_of_order ✓8% ▊         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt002_canceled_intermediate_callback ✓8% ▊         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt003_chain_with_table ✓8% ▊         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt004_chain_with_sliders[False] ✓8% ▊         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt004_chain_with_sliders[True] ✓8% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt005_multi_converging_chain ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt006_derived_props ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt007_early_preventupdate_inputs_above_below ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt008_direct_chain ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt009_branched_chain ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt010_shared_grandparent ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt011_callbacks_triggered_on_generated_output ✓9% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt012_initialization_with_overlapping_outputs[False] ✓10% ▉         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt012_initialization_with_overlapping_outputs[True] ✓10% █         
+
+ tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt013_chained_callback_should_be_blocked ✓10% █         
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi001_prevent_initial_call[flavor0] ✓10% █         
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi001_prevent_initial_call[flavor1] ✓10% █         
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi001_prevent_initial_call[flavor2] ✓10% █         
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi001_prevent_initial_call[flavor3] ✓10% █▏        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi001_prevent_initial_call[flavor4] ✓11% █▏        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi002_pattern_matching[flavor0] ✓11% █▏        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi002_pattern_matching[flavor1] ✓11% █▏        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi002_pattern_matching[flavor2] ✓11% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi002_pattern_matching[flavor3] ✓11% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi002_pattern_matching[flavor4] ✓11% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi003_multi_outputs[flavor0] ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi003_multi_outputs[flavor1] ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi003_multi_outputs[flavor2] ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi003_multi_outputs[flavor3] ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi003_multi_outputs[flavor4] ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_initial.py::test_cbpi004_positional_arg ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_update.py::test_cbpu001_aborted_callback ✓12% █▎        
+
+ tests/integration/callbacks/test_prevent_update.py::test_cbpu002_multi_output_no_update ✓13% █▍        
+
+ tests/integration/callbacks/test_prevent_update.py::test_cbpu003_no_update_chains ✓13% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva001_callback_dep_types ✓13% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva002_callback_return_validation ✓13% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva003_list_single_output ✓13% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva004_named_args[True-True-True] ✓13% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva004_named_args[True-True-False] ✓14% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva004_named_args[False-False-True] ✓14% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva004_named_args[False-False-False] ✓14% █▍        
+
+ tests/integration/callbacks/test_validation.py::test_cbva005_tuple_args ✓14% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc001_todo_app[False] ✓14% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc001_todo_app[True] ✓14% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc002_fibonacci_app[False] ✓14% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc002_fibonacci_app[True] ✓15% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc003_same_keys ✓15% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc004_layout_chunk_changed_props ✓15% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc005_callbacks_count ✓15% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc006_grouping_callbacks ✓15% █▌        
+
+ tests/integration/callbacks/test_wildcards.py::test_cbwc007_pmc_update_subtree_ordering ✓15% █▌        
+
+ tests/integration/clientside/test_clientside.py::test_clsd001_simple_clientside_serverside_callback ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd002_chained_serverside_clientside_callbacks ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd003_clientside_exceptions_halt_subsequent_updates ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd004_clientside_multiple_outputs ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd006_PreventUpdate ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd007_no_update ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd008_clientside_inline_source ✓16% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd009_clientside_callback_context_triggered ✓17% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd010_clientside_callback_context_inputs ✓17% █▋        
+
+ tests/integration/clientside/test_clientside.py::test_clsd011_clientside_callback_context_inputs_list ✓17% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd012_clientside_callback_context_states ✓17% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd013_clientside_callback_context_states_list ✓17% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd014_input_output_callback ✓17% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd015_clientside_chained_callbacks_returning_promise ✓17% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd016_serverside_clientside_shared_input_with_promise ✓18% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd017_clientside_serverside_shared_input_with_promise ✓18% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd018_clientside_inline_async_function ✓18% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd019_clientside_inline_promise ✓18% █▊        
+
+ tests/integration/clientside/test_clientside.py::test_clsd020_clientside_callback_context_triggered_id ✓18% █▉        
+
+ tests/integration/clientside/test_clientside.py::test_clsd021_simple_clientside_module_serverside_callback ✓18% █▉        
+
+ tests/integration/clientside/test_clientside_functions.py::test_sp001_clientside_setprops ✓19% █▉        
+
+ tests/integration/clientside/test_clientside_restarts.py::test_clrs001_clientside_inline_restarts s19% █▉        
+
+ tests/integration/dash_assets/test_dash_assets.py::test_dada001_assets ✓19% █▉        
+
+ tests/integration/dash_assets/test_dash_assets.py::test_dada002_external_files_init ✓19% █▉        
+
+ tests/integration/devtools/test_callback_timing.py::test_dvct001_callback_timing ✓19% █▉        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv001_blank ✓19% █▉        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv002_blank_id_prop ✓19% █▉        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv003_duplicate_outputs_same_callback ✓20% █▉        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv004_duplicate_outputs_across_callbacks ✓20% ██        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv005_input_output_overlap ✓20% ██        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv006_inconsistent_wildcards ✓20% ██        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv007_disallowed_ids ✓20% ██        
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv008_wrong_callback_id ✓20% ██▏       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv009_suppress_callback_exceptions ✓21% ██▏       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv010_bad_props ✓21% ██▏       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv011_duplicate_outputs_simple ✓21% ██▏       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv012_circular_2_step ✓21% ██▏       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv013_circular_3_step ✓21% ██▎       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv014_multipage_errors ✓21% ██▎       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv015_multipage_validation_layout[function] ✓21% ██▎       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv015_multipage_validation_layout[attribute] ✓22% ██▎       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv015_multipage_validation_layout[suppress] ✓22% ██▎       
+
+ tests/integration/devtools/test_callback_validation.py::test_dvcv016_circular_with_input_output ✓22% ██▎       
+
+ tests/integration/devtools/test_devtools_error_handling.py::test_dveh001_python_errors ✓22% ██▎       
+
+ tests/integration/devtools/test_devtools_error_handling.py::test_dveh006_long_python_errors ✓22% ██▎       
+
+ tests/integration/devtools/test_devtools_error_handling.py::test_dveh002_prevent_update_not_in_error_msg ✓22% ██▎       
+
+ tests/integration/devtools/test_devtools_error_handling.py::test_dveh003_validation_errors_in_place ✓22% ██▎       
+
+ tests/integration/devtools/test_devtools_error_handling.py::test_dveh004_validation_errors_creation ✓23% ██▍       
+
+ tests/integration/devtools/test_devtools_error_handling.py::test_dveh005_multiple_outputs ✓23% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui001_disable_props_check_config ✓23% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui002_disable_ui_config ✓23% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui003_callback_graph ✓23% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui004_width_props ✓23% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui005_undo_redo ✓24% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui006_no_undo_redo ✓24% ██▍       
+
+ tests/integration/devtools/test_devtools_ui.py::test_dvui007_other_before_request_func ✓24% ██▍       
+
+ tests/integration/devtools/test_hot_reload.py::test_dvhr001_hot_reload ✓24% ██▌       
+
+ tests/integration/devtools/test_props_check.py::test_dvpc001_prop_check_errors_with_path s24% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback001.py::test_lcbc001_fast_input[diskcache] ✓24% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback002.py::test_lcbc002_long_callback_running[diskcache] ✓24% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback003.py::test_lcbc003_long_callback_running_cancel[diskcache] ✓25% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback004.py::test_lcbc004_long_callback_progress[diskcache] ✓25% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback005.py::test_lcbc005_long_callback_caching[diskcache] s25% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback006.py::test_lcbc006_long_callback_caching_multi[diskcache] ✓25% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback007.py::test_lcbc007_validation_layout[diskcache] ✓25% ██▌       
+
+ tests/integration/long_callback/test_basic_long_callback008.py::test_lcbc008_long_callbacks_error[diskcache] ✓25% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback009.py::test_lcbc009_short_interval[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback010.py::test_lcbc010_side_updates[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback011.py::test_lcbc011_long_pattern_matching[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback012.py::test_lcbc012_long_callback_ctx[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback013.py::test_lcbc013_unordered_state_input[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback014.py::test_lcbc014_progress_delete[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback015.py::test_lcbc015_diff_outputs_same_func[diskcache] ✓26% ██▋       
+
+ tests/integration/long_callback/test_basic_long_callback016.py::test_lcbc016_multi_page_cancel[diskcache] ✓27% ██▋       
+
+ tests/integration/multi_page/test_pages_layout.py::test_pala001_layout ✓27% ██▋       
+
+ tests/integration/multi_page/test_pages_layout.py::test_pala002_meta_tags_default ✓27% ██▊       
+
+ tests/integration/multi_page/test_pages_layout.py::test_pala003_meta_tags_custom ✓27% ██▊       
+
+ tests/integration/multi_page/test_pages_layout.py::test_pala004_no_layout_exception ✓27% ██▊       
+
+ tests/integration/multi_page/test_pages_layout.py::test_pala005_routing_inputs ✓27% ██▊       
+
+ tests/integration/multi_page/test_pages_order.py::test_paor001_order ✓ 28% ██▊       
+
+ tests/integration/multi_page/test_pages_relative_path.py::test_pare001_relative_path ✓28% ██▊       
+
+ tests/integration/multi_page/test_pages_relative_path.py::test_pare002_relative_path_with_url_base_pathname ✓28% ██▊       
+
+ tests/integration/multi_page/test_pages_relative_path.py::test_pare003_absolute_path ✓28% ██▊       
+
+ tests/integration/renderer/test_component_as_prop.py::test_rdcap001_component_as_prop ✓28% ██▊       
+
+ tests/integration/renderer/test_component_as_prop.py::test_rdcap002_component_as_props_dynamic_id ✓28% ██▉       
+
+ tests/integration/renderer/test_component_as_prop.py::test_rdcap003_side_effect_regression ✓28% ██▉       
+
+ tests/integration/renderer/test_component_as_prop.py::test_rdcap004_side_effect_same_component ✓29% ██▉       
+
+ tests/integration/renderer/test_dependencies.py::test_rddp001_dependencies_on_components_that_dont_exist ✓29% ██▉       
+
+ tests/integration/renderer/test_due_diligence.py::test_rddd001_initial_state ✓29% ██▉       
+
+ tests/integration/renderer/test_due_diligence.py::test_rddd002_falsy_child[0] ✓29% ██▉       
+
+ tests/integration/renderer/test_due_diligence.py::test_rddd002_falsy_child[child1] ✓29% ██▉       
+
+ tests/integration/renderer/test_iframe.py::test_rdif001_sandbox_allow_scripts ✓29% ██▉       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls001_multi_loading_components ✓29% ██▉       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls002_chained_loading_states ✓30% ██▉       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs0-Updating...-False] ✓30% ███       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs1-Dash-False] ✓30% ███       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs2-Dash-False] ✓30% ███       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs3-Hello World-False] ✓30% ███       
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs4-Updating...-True] ✓30% ███▏      
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs5-Dash-True] ✓31% ███▏      
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs6-Dash-True] ✓31% ███▏      
+
+ tests/integration/renderer/test_loading_states.py::test_rdls003_update_title[kwargs7-Hello World-True] ✓31% ███▏      
+
+ tests/integration/renderer/test_loading_states.py::test_rdls004_update_title_chained_callbacks[None] ✓31% ███▏      
+
+ tests/integration/renderer/test_loading_states.py::test_rdls004_update_title_chained_callbacks[Custom Update Title] ✓31% ███▎      
+
+ tests/integration/renderer/test_multi_output.py::test_rdmo001_single_input_multi_outputs_on_multiple_components ✓31% ███▎      
+
+ tests/integration/renderer/test_multi_output.py::test_rdmo002_multi_outputs_on_single_component ✓31% ███▎      
+
+ tests/integration/renderer/test_multi_output.py::test_rdmo003_single_output_as_multi ✓32% ███▎      
+
+ tests/integration/renderer/test_multi_output.py::test_rdmo004_multi_output_circular_dependencies ✓32% ███▎      
+
+ tests/integration/renderer/test_multi_output.py::test_rdmo005_set_props_behavior ✓32% ███▎      
+
+ tests/integration/renderer/test_persistence.py::test_rdps001_local_reload ✓32% ███▎      
+
+ tests/integration/renderer/test_persistence.py::test_rdps002_session_reload ✓32% ███▎      
+
+ tests/integration/renderer/test_persistence.py::test_rdps003_memory_reload ✓32% ███▎      
+
+ tests/integration/renderer/test_persistence.py::test_rdps004_show_hide ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps005_persisted_props ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps006_move_on_page ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps007_one_prop_changed ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps008_unsaved_part_changed ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps009_clear_prop_callback ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps010_toggle_persistence ✓33% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps011_toggle_persistence2 ✓34% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps012_pattern_matching ✓34% ███▍      
+
+ tests/integration/renderer/test_persistence.py::test_rdps013_persisted_props_nested ✓34% ███▍      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[layout,dependencies,update-component,_config] ✓34% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[layout,dependencies,_config,update-component] ✓34% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[layout,update-component,dependencies,_config] ✓34% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[layout,update-component,_config,dependencies] ✓34% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[layout,_config,dependencies,update-component] ✓35% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[layout,_config,update-component,dependencies] ✓35% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[dependencies,layout,update-component,_config] ✓35% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[dependencies,layout,_config,update-component] ✓35% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[dependencies,update-component,layout,_config] ✓35% ███▌      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[dependencies,update-component,_config,layout] ✓35% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[dependencies,_config,layout,update-component] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[dependencies,_config,update-component,layout] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[update-component,layout,dependencies,_config] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[update-component,layout,_config,dependencies] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[update-component,dependencies,layout,_config] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[update-component,dependencies,_config,layout] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[update-component,_config,layout,dependencies] ✓36% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[update-component,_config,dependencies,layout] ✓37% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[_config,layout,dependencies,update-component] ✓37% ███▋      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[_config,layout,update-component,dependencies] ✓37% ███▊      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[_config,dependencies,layout,update-component] ✓37% ███▊      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[_config,dependencies,update-component,layout] ✓37% ███▊      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[_config,update-component,layout,dependencies] ✓37% ███▊      
+
+ tests/integration/renderer/test_race_conditions.py::test_rdrc001_race_conditions[_config,update-component,dependencies,layout] ✓38% ███▊      
+
+ tests/integration/renderer/test_request_hooks.py::test_rdrh001_request_hooks ✓38% ███▊      
+
+ tests/integration/renderer/test_request_hooks.py::test_rdrh002_with_custom_renderer_interpolated ✓38% ███▊      
+
+ tests/integration/renderer/test_request_hooks.py::test_rdrh003_refresh_jwt[401] ✓38% ███▊      
+
+ tests/integration/renderer/test_request_hooks.py::test_rdrh003_refresh_jwt[400] ✓38% ███▊      
+
+ tests/integration/renderer/test_request_hooks.py::test_rdrh004_layout_hooks ✓38% ███▉      
+
+ tests/integration/renderer/test_state_and_input.py::test_rdsi001_state_and_inputs ✓38% ███▉      
+
+ tests/integration/renderer/test_state_and_input.py::test_rdsi002_event_properties_state_and_inputs ✓39% ███▉      
+
+ tests/integration/security/test_injection.py::test_sinj001_url_injection ✓39% ███▉      
+
+ tests/integration/security/test_xss.py::test_xss001_banned_protocols ✓ 39% ███▉      
+
+ tests/integration/security/test_xss.py::test_xss002_blank_href ✓       39% ███▉      
+
+ tests/integration/test_csp.py::test_incs001_csp_hashes_inline_scripts[False-None-expectation0] ✓39% ███▉      
+
+ tests/integration/test_csp.py::test_incs001_csp_hashes_inline_scripts[True-sha256-expectation1] ✓39% ███▉      
+
+ tests/integration/test_csp.py::test_incs001_csp_hashes_inline_scripts[True-sha384-expectation2] ✓40% ███▉      
+
+ tests/integration/test_csp.py::test_incs001_csp_hashes_inline_scripts[True-sha512-expectation3] ✓40% ████      
+
+ tests/integration/test_csp.py::test_incs001_csp_hashes_inline_scripts[True-sha999-expectation4] ✓40% ████      
+
+ tests/integration/test_duo.py::test_duo001_wait_for_text_error ✓       40% ████      
+
+ tests/integration/test_generation.py::test_gene001_simple_callback ✓   40% ████      
+
+ tests/integration/test_generation.py::test_gene002_arbitrary_resources ✓40% ████      
+
+ tests/integration/test_generation.py::test_gene003_max_props ✓         40% ████▏     
+
+ tests/integration/test_generation.py::test_gene004_required_children_prop ✓41% ████▏     
+
+ tests/integration/test_integration.py::test_inin003_wildcard_data_attributes ✓41% ████▏     
+
+ tests/integration/test_integration.py::test_inin004_no_props_component ✓41% ████▏     
+
+ tests/integration/test_integration.py::test_inin005_flow_component ✓   41% ████▏     
+
+ tests/integration/test_integration.py::test_inin006_meta_tags ✓        41% ████▎     
+
+ tests/integration/test_integration.py::test_inin007_change_viewport_meta_tag ✓41% ████▎     
+
+ tests/integration/test_integration.py::test_inin008_index_customization ✓41% ████▎     
+
+ tests/integration/test_integration.py::test_inin009_invalid_index_string ✓42% ████▎     
+
+ tests/integration/test_integration.py::test_inin010_func_layout_accepted ✓42% ████▎     
+
+ tests/integration/test_integration.py::test_inin017_late_component_register ✓42% ████▎     
+
+ tests/integration/test_integration.py::test_inin_024_port_env_success ✓42% ████▎     
+
+ tests/integration/test_integration.py::test_inin025_url_base_pathname ✓42% ████▎     
+
+ tests/integration/test_integration.py::test_inin026_graphs_in_tabs_do_not_share_state ✓42% ████▎     
+
+
+
+―――――――――――――――――――― test_inin027_multi_page_without_pages_folder ――――――――――――――――――――
+
+
+
+dash_duo = <dash.testing.composite.DashComposite object at 0x75ea9b16e410>
+
+
+
+    def test_inin027_multi_page_without_pages_folder(dash_duo):
+
+        app = Dash(__name__, pages_folder="")
+
+    
+
+        # test for storing arbitrary keyword arguments: An `id` prop is defined for every page
+
+        # test for defining multiple pages within a single file: layout is passed directly to `register_page`
+
+        # in the following two modules:
+
+        dash.register_page(
+
+            "multi_layout1",
+
+            layout=html.Div("text for multi_layout1", id="text_multi_layout1"),
+
+            path="/",
+
+            title="Supplied Title",
+
+            description="This is the supplied description",
+
+            name="Supplied name",
+
+            image="birds.jpeg",
+
+            id="multi_layout1",
+
+        )
+
+        dash.register_page(
+
+            "multi_layout2",
+
+            layout=html.Div("text for multi_layout2", id="text_multi_layout2"),
+
+            path="/layout2",
+
+            id="multi_layout2",
+
+        )
+
+    
+
+        dash.register_page(
+
+            "not_found_404",
+
+            layout=html.Div("text for not_found_404", id="text_not_found_404"),
+
+            id="not_found_404",
+
+        )
+
+    
+
+        app.layout = html.Div(
+
+            [
+
+                html.Div(
+
+>                   [
+
+                        html.Div(
+
+                            dcc.Link(
+
+                                f"{page['name']} - {page['path']}",
+
+                                id=page["id"],
+
+                                href=page["path"],
+
+                            )
+
+                        )
+
+                        for page in dash.page_registry.values()
+
+                    ]
+
+                ),
+
+                dash.page_container,
+
+            ]
+
+        )
+
+
+
+tests/integration/test_integration.py:401: 
+
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+.0 = <odict_iterator object at 0x75ea9b05e6b0>
+
+
+
+                [
+
+                    html.Div(
+
+                        dcc.Link(
+
+                            f"{page['name']} - {page['path']}",
+
+>                           id=page["id"],
+
+                            href=page["path"],
+
+                        )
+
+                    )
+
+                    for page in dash.page_registry.values()
+
+                ]
+
+            ),
+
+            dash.page_container,
+
+        ]
+
+    )
+
+E   KeyError: 'id'
+
+
+
+tests/integration/test_integration.py:405: KeyError
+
+
+
+ tests/integration/test_integration.py::test_inin027_multi_page_without_pages_folder ⨯43% ████▍     
+
+ tests/integration/test_integration.py::test_inin028_layout_as_list ✓   43% ████▍     
+
+ tests/integration/test_integration.py::test_inin029_layout_as_list_with_pages ✓43% ████▍     
+
+ tests/integration/test_legacy_components.py::test_leg001_legacy_pre_component_as_props ✓43% ████▍     
+
+ tests/integration/test_pages_redirect_home.py::test_pare001_redirect_home s43% ████▍     
+
+ tests/integration/test_patch.py::test_pch001_patch_operations ✓        43% ████▍     
+
+ tests/integration/test_patch.py::test_pch002_patch_app_pmc_callbacks ✓ 43% ████▍     
+
+ tests/integration/test_patch.py::test_pch003_patch_children ✓          44% ████▍     
+
+ tests/integration/test_patch.py::test_pch004_duplicate_output_restart ✓44% ████▍     
+
+ tests/integration/test_patch.py::test_pch005_clientside_duplicate ✓    44% ████▍     
+
+ tests/integration/test_scripts.py::test_scri001_scripts[True] ✓        44% ████▌     
+
+ tests/integration/test_scripts.py::test_scri001_scripts[False] ✓       44% ████▌     
+
+ tests/integration/test_scripts.py::test_scri002_scripts_on_request ✓   44% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc001_init ✓     45% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc002_get_item_with_children ✓45% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc003_get_item_with_children_as_component_instead_of_list ✓45% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc004_get_item_with_nested_children_one_branch ✓45% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc005_get_item_with_nested_children_two_branches ✓45% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc006_get_item_with_full_tree ✓45% ████▌     
+
+ tests/unit/development/test_base_component.py::test_debc007_len_with_full_tree ✓45% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc008_set_item_anywhere_in_tree ✓46% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc009_del_item_full_tree ✓46% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc010_traverse_full_tree ✓46% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc011_traverse_with_tuples ✓46% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc012_to_plotly_json_full_tree ✓46% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc013_get_item_raises_key_if_id_doesnt_exist ✓46% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc014_set_item ✓ 47% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc015_set_item_with_children_as_list ✓47% ████▋     
+
+ tests/unit/development/test_base_component.py::test_debc016_set_item_with_nested_children ✓47% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc017_set_item_raises_key_error ✓47% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc018_del_item_from_list ✓47% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc019_del_item_from_class ✓47% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc020_to_plotly_json_without_children ✓47% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc021_to_plotly_json_with_null_arguments ✓48% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc022_to_plotly_json_with_children ✓48% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc023_to_plotly_json_with_wildcards ✓48% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc024_len ✓      48% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc025_iter ✓     48% ████▊     
+
+ tests/unit/development/test_base_component.py::test_debc026_component_not_children ✓48% ████▉     
+
+ tests/unit/development/test_base_component.py::test_debc027_component_error_message ✓48% ████▉     
+
+ tests/unit/development/test_base_component.py::test_debc028_set_random_id ✓49% ████▉     
+
+ tests/unit/development/test_base_component.py::test_debc029_random_id_errors ✓49% ████▉     
+
+ tests/unit/development/test_base_component.py::test_debc030_invalid_children_args ✓49% ████▉     
+
+ tests/unit/development/test_collect_nodes.py::test_dcn001_collect_nodes ✓49% ████▉     
+
+ tests/unit/development/test_collect_nodes.py::test_dcn002_base_nodes ✓ 49% ████▉     
+
+ tests/unit/development/test_component_loader.py::test_loadcomponents ✓ 49% ████▉     
+
+ tests/unit/development/test_component_loader.py::test_loadcomponents_from_generated_class ✓50% ████▉     
+
+ tests/unit/development/test_flow_metadata_conversions.py::test_docstring ✓50% █████     
+
+ tests/unit/development/test_flow_metadata_conversions.py::test_docgen_to_python_args ✓50% █████     
+
+ tests/unit/development/test_generate_class.py::test_to_plotly_json ✓   50% █████     
+
+ tests/unit/development/test_generate_class.py::test_arguments_become_attributes ✓50% █████     
+
+ tests/unit/development/test_generate_class.py::test_repr_single_default_argument ✓50% █████     
+
+ tests/unit/development/test_generate_class.py::test_repr_single_non_default_argument ✓50% █████▏    
+
+ tests/unit/development/test_generate_class.py::test_repr_multiple_arguments ✓51% █████▏    
+
+ tests/unit/development/test_generate_class.py::test_repr_nested_arguments ✓51% █████▏    
+
+ tests/unit/development/test_generate_class.py::test_repr_with_wildcards ✓51% █████▏    
+
+ tests/unit/development/test_generate_class.py::test_docstring ✓        51% █████▏    
+
+ tests/unit/development/test_generate_class.py::test_no_events ✓        51% █████▎    
+
+ tests/unit/development/test_generate_class.py::test_required_props ✓   51% █████▎    
+
+ tests/unit/development/test_generate_class.py::test_attrs_match_forbidden_props ✓52% █████▎    
+
+ tests/unit/development/test_generate_class_file.py::test_class_string ✓52% █████▎    
+
+ tests/unit/development/test_generate_class_file.py::test_class_file ✓  52% █████▎    
+
+ tests/unit/development/test_metadata_conversions.py::test_docstring ✓  52% █████▎    
+
+ tests/unit/development/test_metadata_conversions.py::test_docgen_to_python_args ✓52% █████▎    
+
+ tests/unit/development/test_r_component_gen.py::test_r_exports ✓       52% █████▎    
+
+ tests/unit/library/test_async_resources.py::test_resources_eager ✓     52% █████▎    
+
+ tests/unit/library/test_async_resources.py::test_resources_lazy ✓      53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_scalar ✓53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_tuple[0] s53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_tuple[1] ✓53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_tuple[2] ✓53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_tuple[3] ✓53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_tuple[4] ✓53% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_dict[0] s54% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_dict[1] ✓54% █████▍    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_dict[2] ✓54% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_dict[3] ✓54% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_dict[4] ✓54% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_size[0] ✓54% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_size[1] ✓55% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_size[2] ✓55% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_size[3] ✓55% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_output_size[4] ✓55% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_scalar_grouping ✓55% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_list_grouping[0] s55% █████▌    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_list_grouping[1] ✓55% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_list_grouping[2] ✓56% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_list_grouping[3] ✓56% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_list_grouping[4] ✓56% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_dict_grouping[0] s56% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_dict_grouping[1] ✓56% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_dict_grouping[2] ✓56% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_dict_grouping[3] ✓57% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_dict_grouping[4] ✓57% █████▋    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_mixed_grouping[0] ✓57% █████▊    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_mixed_grouping[1] ✓57% █████▊    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_mixed_grouping[2] ✓57% █████▊    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_mixed_grouping[3] ✓57% █████▊    
+
+ tests/unit/library/test_grouped_callbacks.py::test_callback_input_mixed_grouping[4] ✓57% █████▊    
+
+ tests/unit/library/test_grouped_callbacks.py::test_clientside_callback_grouping_validation[grouping0] ✓58% █████▊    
+
+ tests/unit/library/test_grouped_callbacks.py::test_clientside_callback_grouping_validation[grouping1] ✓58% █████▊    
+
+ tests/unit/library/test_grouping.py::test_flatten_scalar ✓             58% █████▊    
+
+ tests/unit/library/test_grouping.py::test_flatten_list[0] ✓            58% █████▊    
+
+ tests/unit/library/test_grouping.py::test_flatten_list[1] ✓            58% █████▊    
+
+ tests/unit/library/test_grouping.py::test_flatten_list[2] ✓            58% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_list[3] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_list[4] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict[0] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict[1] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict[2] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict[3] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict[4] ✓            59% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict_key_order[0] ✓  60% █████▉    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict_key_order[1] ✓  60% ██████    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict_key_order[2] ✓  60% ██████    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict_key_order[3] ✓  60% ██████    
+
+ tests/unit/library/test_grouping.py::test_flatten_dict_key_order[4] ✓  60% ██████    
+
+ tests/unit/library/test_grouping.py::test_flatten_mixed[0] ✓           60% ██████    
+
+ tests/unit/library/test_grouping.py::test_flatten_mixed[1] ✓           60% ██████▏   
+
+ tests/unit/library/test_grouping.py::test_flatten_mixed[2] ✓           61% ██████▏   
+
+ tests/unit/library/test_grouping.py::test_flatten_mixed[3] ✓           61% ██████▏   
+
+ tests/unit/library/test_grouping.py::test_flatten_mixed[4] ✓           61% ██████▏   
+
+ tests/unit/library/test_grouping.py::test_flatten_odd_value ✓          61% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_scalar ✓61% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_list[0] ✓61% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_list[1] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_list[2] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_list[3] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_list[4] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_dict[0] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_dict[1] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_dict[2] ✓62% ██████▎   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_dict[3] ✓63% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_dict[4] ✓63% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_mixed[0] ✓63% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_mixed[1] ✓63% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_mixed[2] ✓63% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_mixed[3] ✓63% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_position_mixed[4] ✓64% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_scalar ✓        64% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_list[0] ✓       64% ██████▍   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_list[1] ✓       64% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_list[2] ✓       64% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_list[3] ✓       64% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_list[4] ✓       64% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_dict[0] ✓       65% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_dict[1] ✓       65% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_dict[2] ✓       65% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_dict[3] ✓       65% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_dict[4] ✓       65% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_mixed[0] ✓      65% ██████▌   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_mixed[1] ✓      66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_mixed[2] ✓      66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_mixed[3] ✓      66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_map_grouping_mixed[4] ✓      66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_scalar ✓66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_list[0] ✓66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_list[1] ✓66% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_list[2] ✓67% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_list[3] ✓67% ██████▋   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_list[4] ✓67% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_dict[0] ✓67% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_dict[1] ✓67% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_dict[2] ✓67% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_dict[3] ✓67% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_dict[4] ✓68% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_mixed[0] ✓68% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_mixed[1] ✓68% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_mixed[2] ✓68% ██████▊   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_mixed[3] ✓68% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_mixed[4] ✓68% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_make_grouping_by_key_default ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_grouping_scalar ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_grouping_list[0] ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_grouping_list[1] ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_grouping_list[2] ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_grouping_list[3] ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_grouping_list[4] ✓69% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_dict[0] ✓    70% ██████▉   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_dict[1] ✓    70% ███████   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_dict[2] ✓    70% ███████   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_dict[3] ✓    70% ███████   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_dict[4] ✓    70% ███████   
+
+ tests/unit/library/test_grouping.py::test_validate_schema_mixed[0] ✓   70% ███████▏  
+
+ tests/unit/library/test_grouping.py::test_validate_schema_mixed[1] ✓   71% ███████▏  
+
+ tests/unit/library/test_grouping.py::test_validate_schema_mixed[2] ✓   71% ███████▏  
+
+ tests/unit/library/test_grouping.py::test_validate_schema_mixed[3] ✓   71% ███████▏  
+
+ tests/unit/library/test_grouping.py::test_validate_schema_mixed[4] ✓   71% ███████▏  
+
+ tests/unit/library/test_long_callback_validation.py::test_circular_long_callback_progress ✓71% ███████▎  
+
+ tests/unit/library/test_utils.py::test_ddut001_attribute_dict ✓        71% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val0] ✓71% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val1] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val2] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val3] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val4] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val5] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val6] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val7] ✓72% ███████▎  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val8] ✓73% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val9] ✓73% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val10] ✓73% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val11] ✓73% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val12] ✓73% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val13] ✓73% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val14] ✓74% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val15] ✓74% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddvl001_fail_handler_fails_correctly[val16] ✓74% ███████▍  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output0-True-False-False] ✓74% ███████▌  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output1-False-True-False] ✓74% ███████▌  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output2-True-True-False] ✓74% ███████▌  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output3-False-False-True] ✓74% ███████▌  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output4-initial_duplicate-False-False] ✓75% ███████▌  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output5-False-initial_duplicate-False] ✓75% ███████▌  
+
+ tests/unit/library/test_validate.py::test_ddv002_allow_duplicate_validation[output6-False-False-False] ✓75% ███████▌  
+
+ tests/unit/pages/test_pages.py::test_infer_path[pages.page1-None-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/pages-/page1] ✓75% ███████▌  
+
+ tests/unit/pages/test_pages.py::test_infer_path[Pages.page1-None-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/Pages-/page1] ✓75% ███████▌  
+
+ tests/unit/pages/test_pages.py::test_infer_path[custom_pages.page1-None-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages-/page1] ✓75% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_infer_path[custom.pages.page1-None-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom.pages-/page1] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_infer_path[custom.pages.page1-None-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom/pages-/page1] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_infer_path[custom_pages.chapter_1.page_1-None-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages-/chapter-1/page-1] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_infer_path[dir.my_page-None-None-/dir/my-page] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_infer_path[pages.page1-/items/<item_id>-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/pages-/items/none] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_module_name_is_package[pages.test_pages-False] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_module_name_is_package[pages-True] ✓76% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_path_to_module_name[/page.py-page] ✓77% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_path_to_module_name[/pages/page.py-pages.page] ✓77% ███████▋  
+
+ tests/unit/pages/test_pages.py::test_path_to_module_name[/pages-pages] ✓77% ███████▊  
+
+ tests/unit/pages/test_pages.py::test_path_to_module_name[/sub_dir/pages-sub_dir.pages] ✓77% ███████▊  
+
+ tests/unit/pages/test_pages.py::test_import_layouts_from_pages[pages.test_pages-custom_pages-custom_pages.page] ✓77% ███████▊  
+
+ tests/unit/pages/test_pages.py::test_import_layouts_from_pages[pages.test_pages-sub_dir/custom_pages-sub_dir.custom_pages.page] ✓77% ███████▊  
+
+ tests/unit/pages/test_pages.py::test_import_layouts_from_pages[pages.test_pages-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages-custom_pages.page] ✓78% ███████▊  
+
+ tests/unit/pages/test_pages.py::test_import_layouts_from_pages[pages-custom_pages-pages.custom_pages.page] ✓78% ███████▊  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[-False-None] ✓78% ███████▊  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[None-False-None] ✓78% ███████▊  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[pages-False-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/pages] ✓78% ███████▊  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[pages_folder3-False-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/pages] ✓78% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[custom_pages-True-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages] ✓78% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[custom_pages-False-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages-True-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages-False-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[pages_folder8-False-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_config[sub_dir/custom_pages-True-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/sub_dir/custom_pages] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_missing_path_config[pages-False-expectation0] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_missing_path_config[pages-True-expectation1] ✓79% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_missing_path_config[does_not_exist-True-expectation2] ✓80% ███████▉  
+
+ tests/unit/pages/test_pages_config.py::test_pages_missing_path_config[does_not_exist-False-expectation3] ✓80% ████████  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[True-custom_pages] ✓80% ████████  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[True-pages_folder1] ✓80% ████████  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[True-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/custom_pages] ✓80% ████████  
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[True-pages_folder3] ✓80% ████████▏ 
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[True-/home/jim/Documents/dashgit/dash-FIPS/tests/unit/pages/sub_dir/custom_pages] ✓81% ████████▏ 
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[True-pages_folder5] ✓81% ████████▏ 
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[None-custom_pages] ✓81% ████████▏ 
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[None-pages] ✓81% ████████▏ 
+
+ tests/unit/pages/test_pages_config.py::test_pages_folder_app_config[False-custom_pages] ✓81% ████████▎ 
+
+ tests/unit/test_app_runners.py::test_threaded_server_smoke ✓           81% ████████▎ 
+
+ tests/unit/test_app_runners.py::test_process_server_smoke ✓            81% ████████▎ 
+
+ tests/unit/test_browser.py::test_browser_smoke[Chrome] ✓               82% ████████▎ 
+
+ tests/unit/test_browser.py::test_browser_smoke[Firefox] ✓              82% ████████▎ 
+
+ tests/unit/test_browser.py::test_browser_use_remote_webdriver ✓        82% ████████▎ 
+
+ tests/unit/test_configs.py::test_dash_env_vars ✓                       82% ████████▎ 
+
+ tests/unit/test_configs.py::test_valid_pathname_prefix_init[None-None-/-/] ✓82% ████████▎ 
+
+ tests/unit/test_configs.py::test_valid_pathname_prefix_init[/dash/-None-None-/dash/] ✓82% ████████▎ 
+
+ tests/unit/test_configs.py::test_valid_pathname_prefix_init[None-/my-dash-app/-/-/my-dash-app/] ✓83% ████████▍ 
+
+ tests/unit/test_configs.py::test_valid_pathname_prefix_init[/dash/-/my-dash-app/dash/-/dash/-/my-dash-app/dash/] ✓83% ████████▍ 
+
+ tests/unit/test_configs.py::test_invalid_pathname_prefix ✓             83% ████████▍ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_from_environ_app_name ✓83% ████████▍ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_environ_routes ✓      83% ████████▍ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_environ_requests ✓    83% ████████▍ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_assets[/-/assets/reset.css] ✓83% ████████▍ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_assets[/requests/-/requests/assets/reset.css] ✓84% ████████▍ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_assets[/requests/routes/-/requests/routes/assets/reset.css] ✓84% ████████▍ 
+
+ tests/unit/test_configs.py::test_asset_url[None-None-assets-/assets/reset.css] ✓84% ████████▍ 
+
+ tests/unit/test_configs.py::test_asset_url[/app/-None-assets-/app/assets/reset.css] ✓84% ████████▌ 
+
+ tests/unit/test_configs.py::test_asset_url[None-None-css-/css/reset.css] ✓84% ████████▌ 
+
+ tests/unit/test_configs.py::test_asset_url[/app/-None-css-/app/css/reset.css] ✓84% ████████▌ 
+
+ tests/unit/test_configs.py::test_asset_url[None-http://external.com/-assets-http://external.com/assets/reset.css] ✓84% ████████▌ 
+
+ tests/unit/test_configs.py::test_asset_url[/app/-http://external.com/-css-http://external.com/css/reset.css] ✓85% ████████▌ 
+
+ tests/unit/test_configs.py::test_get_relative_path[None-/page2] ✓      85% ████████▌ 
+
+ tests/unit/test_configs.py::test_get_relative_path[/app/-/app/page2] ✓ 85% ████████▌ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/-None-None] ✓    85% ████████▌ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-None-None] ✓85% ████████▌ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/-/-] ✓           85% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app-] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/-] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/-/page-1-page-1] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/page-1-page-1] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/-/page-1/-page-1] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/page-1/-page-1] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/-/page-1/sub-page-1-page-1/sub-page-1] ✓86% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/page-1/sub-page-1-page-1/sub-page-1] ✓87% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/-/page-1/sub-page-1/-page-1/sub-page-1] ✓87% ████████▋ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/page-1/sub-page-1/-page-1/sub-page-1] ✓87% ████████▊ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/my-dash-app/-my-dash-app] ✓87% ████████▊ 
+
+ tests/unit/test_configs.py::test_strip_relative_path[/my-dash-app/-/my-dash-app/something-else/my-dash-app/-something-else/my-dash-app] ✓87% ████████▊ 
+
+ tests/unit/test_configs.py::test_get_combined_config_dev_tools_ui ✓    87% ████████▊ 
+
+ tests/unit/test_configs.py::test_get_combined_config_props_check ✓     88% ████████▊ 
+
+ tests/unit/test_configs.py::test_load_dash_env_vars_refects_to_os_environ ✓88% ████████▊ 
+
+ tests/unit/test_configs.py::test_app_name_server[None-True-__main__] ✓ 88% ████████▊ 
+
+ tests/unit/test_configs.py::test_app_name_server[test-True-test] ✓     88% ████████▊ 
+
+ tests/unit/test_configs.py::test_app_name_server[test-False-test] ✓    88% ████████▊ 
+
+ tests/unit/test_configs.py::test_app_name_server[None-server3-test] ✓  88% ████████▉ 
+
+ tests/unit/test_configs.py::test_app_name_server[test-server4-test] ✓  88% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/--/] ✓  89% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/my-dash-app/--/my-dash-app/] ✓89% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/-/-/] ✓ 89% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/my-dash-app/-/-/my-dash-app/] ✓89% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/-/page-1-/page-1] ✓89% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/my-dash-app/-/page-1-/my-dash-app/page-1] ✓89% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/-/page-1/-/page-1/] ✓90% ████████▉ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/my-dash-app/-/page-1/-/my-dash-app/page-1/] ✓90% █████████ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/-/page-1/sub-page-1-/page-1/sub-page-1] ✓90% █████████ 
+
+ tests/unit/test_configs.py::test_pathname_prefix_relative_url[/my-dash-app/-/page-1/sub-page-1-/my-dash-app/page-1/sub-page-1] ✓90% █████████ 
+
+ tests/unit/test_configs.py::test_invalid_get_relative_path[/-relative-page-1] ✓90% █████████ 
+
+ tests/unit/test_configs.py::test_invalid_get_relative_path[/my-dash-app/-relative-page-1] ✓90% █████████ 
+
+ tests/unit/test_configs.py::test_invalid_strip_relative_path[/-relative-page-1] ✓90% █████████▏
+
+ tests/unit/test_configs.py::test_invalid_strip_relative_path[/my-dash-app-relative-page-1] ✓91% █████████▏
+
+ tests/unit/test_configs.py::test_invalid_strip_relative_path[/my-dash-app-/some-other-path] ✓91% █████████▏
+
+ tests/unit/test_configs.py::test_port_env_fail_str ✓                   91% █████████▏
+
+ tests/unit/test_configs.py::test_port_env_fail_range ✓                 91% █████████▏
+
+ tests/unit/test_configs.py::test_no_proxy_success[False] ✓             91% █████████▎
+
+ tests/unit/test_configs.py::test_no_proxy_success[True] ✓              91% █████████▎
+
+ tests/unit/test_configs.py::test_proxy_success[https://daash.plot.ly-127.0.0.1-8050-/] ✓91% █████████▎
+
+ tests/unit/test_configs.py::test_proxy_success[https://daaash.plot.ly-0.0.0.0-8050-/a/b/c/] ✓92% █████████▎
+
+ tests/unit/test_configs.py::test_proxy_success[https://daaaash.plot.ly-127.0.0.1-1234-/] ✓92% █████████▎
+
+ tests/unit/test_configs.py::test_proxy_success[http://go.away-127.0.0.1-8050-/now/] ✓92% █████████▎
+
+ tests/unit/test_configs.py::test_proxy_success[http://my.server.tv:8765-0.0.0.0-80-/] ✓92% █████████▎
+
+ tests/unit/test_configs.py::test_proxy_failure ✓                       92% █████████▎
+
+ tests/unit/test_configs.py::test_title ✓                               92% █████████▎
+
+ tests/unit/test_configs.py::test_app_delayed_config ✓                  93% █████████▍
+
+ tests/unit/test_configs.py::test_app_invalid_delayed_config ✓          93% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[None-None-False] ✓     93% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[None-True-True] ✓      93% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[None-False-False] ✓    93% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[True-None-True] ✓      93% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[True-True-True] ✓      93% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[True-False-False] ✓    94% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[False-None-False] ✓    94% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[False-True-True] ✓     94% █████████▍
+
+ tests/unit/test_configs.py::test_debug_mode_run[False-False-False] ✓   94% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[None-None-True] ✓94% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[None-True-True] ✓94% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[None-False-False] ✓95% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[True-None-True] ✓95% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[True-True-True] ✓95% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[True-False-False] ✓95% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[False-None-False] ✓95% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[False-True-True] ✓95% █████████▌
+
+ tests/unit/test_configs.py::test_debug_mode_enable_dev_tools[False-False-False] ✓95% █████████▋
+
+ tests/unit/test_configs.py::test_missing_flask_compress_raises ✓       96% █████████▋
+
+ tests/unit/test_fingerprint.py::test_fingerprint ✓                     96% █████████▋
+
+ tests/unit/test_old_imports.py::test_old_dcc ✓                         96% █████████▋
+
+ tests/unit/test_old_imports.py::test_old_table ✓                       96% █████████▋
+
+ tests/unit/test_patch.py::test_pat001_patch_assign_item ✓              96% █████████▋
+
+ tests/unit/test_patch.py::test_pat002_patch_assign_attr ✓              96% █████████▋
+
+ tests/unit/test_patch.py::test_pat003_patch_multi_operations ✓         97% █████████▋
+
+ tests/unit/test_patch.py::test_pat004_patch_nested_assign ✓            97% █████████▋
+
+ tests/unit/test_patch.py::test_pat005_patch_delete_item ✓              97% █████████▊
+
+ tests/unit/test_patch.py::test_pat006_patch_delete_attr ✓              97% █████████▊
+
+ tests/unit/test_patch.py::test_pat007_patch_append ✓                   97% █████████▊
+
+ tests/unit/test_patch.py::test_pat008_patch_prepend ✓                  97% █████████▊
+
+ tests/unit/test_patch.py::test_pat009_patch_extend ✓                   97% █████████▊
+
+ tests/unit/test_patch.py::test_pat010_patch_merge ✓                    98% █████████▊
+
+ tests/unit/test_patch.py::test_pat011_patch_add ✓                      98% █████████▊
+
+ tests/unit/test_patch.py::test_pat012_patch_sub ✓                      98% █████████▊
+
+ tests/unit/test_patch.py::test_pat013_patch_mul ✓                      98% █████████▊
+
+ tests/unit/test_patch.py::test_pat014_patch_div ✓                      98% █████████▊
+
+ tests/unit/test_patch.py::test_pat015_patch_insert ✓                   98% █████████▉
+
+ tests/unit/test_patch.py::test_pat016_patch_slice ✓                    98% █████████▉
+
+ tests/unit/test_patch.py::test_pat017_patch_clear ✓                    99% █████████▉
+
+ tests/unit/test_patch.py::test_pat018_patch_reverse ✓                  99% █████████▉
+
+ tests/unit/test_patch.py::test_pat019_patch_remove ✓                   99% █████████▉
+
+ tests/unit/test_patch.py::test_pat020_patch_pickle ✓                   99% █████████▉
+
+ tests/unit/test_patch.py::test_pat021_patch_iter ✓                     99% █████████▉
+
+ tests/unit/test_resources.py::test_external ✓                          99% █████████▉
+
+ tests/unit/test_resources.py::test_external_kwarg ✓                    99% █████████▉
+
+ tests/unit/test_resources.py::test_internal ✓                          99% ██████████
+
+ tests/unit/test_resources.py::test_collect_and_register_resources ✓    99% ██████████
+
+ tests/unit/test_testing.py::test_tst001_ignore_register_page ✓        100% ██████████
+
+================================== warnings summary ==================================
+
+tests/integration/callbacks/test_basic_callback.py:309
+
+  /home/jim/Documents/dashgit/dash-FIPS/tests/integration/callbacks/test_basic_callback.py:309: DeprecationWarning: The '__version__' attribute is deprecated and will be removed in Werkzeug 3.1. Use feature detection or 'importlib.metadata.version("werkzeug")' instead.
+
+    condition=werkzeug.__version__ in ("2.1.0", "2.1.1"),
+
+
+
+tests/integration/callbacks/test_callback_context.py:100
+
+  /home/jim/Documents/dashgit/dash-FIPS/tests/integration/callbacks/test_callback_context.py:100: PytestUnknownMarkWarning: Unknown pytest.mark.DASH1350 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+
+    @pytest.mark.DASH1350
+
+
+
+tests/integration/callbacks/test_callback_context.py:220
+
+  /home/jim/Documents/dashgit/dash-FIPS/tests/integration/callbacks/test_callback_context.py:220: PytestUnknownMarkWarning: Unknown pytest.mark.DASH1350 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+
+    @pytest.mark.DASH1350
+
+
+
+tests/integration/callbacks/test_callback_context.py::test_cbcx005_grouped_clicks
+
+tests/integration/callbacks/test_callback_context.py::test_cbcx005_grouped_clicks
+
+tests/integration/callbacks/test_callback_context.py::test_cbcx005_grouped_clicks
+
+tests/integration/callbacks/test_callback_context.py::test_cbcx005_grouped_clicks
+
+tests/integration/callbacks/test_callback_context.py::test_cbcx005_grouped_clicks
+
+  /usr/local/lib/python3.10/dist-packages/selenium/webdriver/common/action_chains.py:268: DeprecationWarning:
+
+  
+
+  move_to_element_with_offset() currently tries to use the top left corner of the element as the origin; in Selenium 4.3 it will use the in-view center point of the element as the origin.
+
+
+
+tests/integration/callbacks/test_multiple_callbacks.py::test_cbmt013_chained_callback_should_be_blocked
+
+  /home/jim/Documents/dashgit/dash-FIPS/tests/integration/callbacks/test_multiple_callbacks.py:653: DeprecationWarning:
+
+  
+
+  find_element_by_tag_name is deprecated. Please use find_element(by=By.TAG_NAME, value=name) instead
+
+
+
+tests/integration/devtools/test_callback_timing.py::test_dvct001_callback_timing
+
+  /usr/local/lib/python3.10/dist-packages/_pytest/threadexception.py:77: PytestUnhandledThreadExceptionWarning:
+
+  
+
+  Exception in thread Thread-3793 (<lambda>)
+
+  
+
+  Traceback (most recent call last):
+
+    File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+
+      self.run()
+
+    File "/usr/lib/python3.10/threading.py", line 953, in run
+
+      self._target(*self._args, **self._kwargs)
+
+    File "/home/jim/Documents/dashgit/dash-FIPS/dash/dash.py", line 1804, in <lambda>
+
+      target=lambda: _watch.watch(
+
+    File "/home/jim/Documents/dashgit/dash-FIPS/dash/_watch.py", line 35, in watch
+
+      walk()
+
+    File "/home/jim/Documents/dashgit/dash-FIPS/dash/_watch.py", line 14, in walk
+
+      for current, _, files in os.walk(folder):
+
+    File "/usr/lib/python3.10/os.py", line 419, in _walk
+
+      yield from _walk(new_path, topdown, onerror, followlinks)
+
+    File "/usr/lib/python3.10/os.py", line 419, in _walk
+
+      yield from _walk(new_path, topdown, onerror, followlinks)
+
+    File "/usr/lib/python3.10/os.py", line 419, in _walk
+
+      yield from _walk(new_path, topdown, onerror, followlinks)
+
+    [Previous line repeated 1 more time]
+
+    File "/usr/lib/python3.10/os.py", line 368, in _walk
+
+      entry = next(scandir_it)
+
+  SystemExit
+
+
+
+tests/unit/test_app_runners.py::test_threaded_server_smoke
+
+  /usr/local/lib/python3.10/dist-packages/_pytest/threadexception.py:77: PytestUnhandledThreadExceptionWarning:
+
+  
+
+  Exception in thread Thread-8323 (process_request_thread)
+
+  
+
+  Traceback (most recent call last):
+
+    File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+
+      self.run()
+
+    File "/usr/lib/python3.10/threading.py", line 953, in run
+
+      self._target(*self._args, **self._kwargs)
+
+    File "/usr/lib/python3.10/socketserver.py", line 683, in process_request_thread
+
+      self.finish_request(request, client_address)
+
+    File "/usr/lib/python3.10/socketserver.py", line 360, in finish_request
+
+      self.RequestHandlerClass(request, client_address, self)
+
+    File "/usr/lib/python3.10/socketserver.py", line 747, in __init__
+
+      self.handle()
+
+    File "/usr/local/lib/python3.10/dist-packages/werkzeug/serving.py", line 390, in handle
+
+      super().handle()
+
+    File "/usr/lib/python3.10/http/server.py", line 433, in handle
+
+      self.handle_one_request()
+
+    File "/usr/lib/python3.10/http/server.py", line 421, in handle_one_request
+
+      method()
+
+    File "/usr/local/lib/python3.10/dist-packages/werkzeug/serving.py", line 362, in run_wsgi
+
+      execute(self.server.app)
+
+    File "/usr/local/lib/python3.10/dist-packages/werkzeug/serving.py", line 326, in execute
+
+      write(data)
+
+    File "/usr/local/lib/python3.10/dist-packages/werkzeug/serving.py", line 301, in write
+
+      self.wfile.write(data)
+
+    File "/usr/lib/python3.10/socketserver.py", line 826, in write
+
+      self._sock.sendall(b)
+
+  SystemExit
+
+
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+===Flaky Test Report===
+
+
+
+test_cbpi002_pattern_matching[flavor0] passed 1 out of the required 1 times. Success!
+
+test_cbpi002_pattern_matching[flavor1] passed 1 out of the required 1 times. Success!
+
+test_cbpi002_pattern_matching[flavor2] passed 1 out of the required 1 times. Success!
+
+test_cbpi002_pattern_matching[flavor3] passed 1 out of the required 1 times. Success!
+
+test_cbpi002_pattern_matching[flavor4] passed 1 out of the required 1 times. Success!
+
+test_sp001_clientside_setprops passed 1 out of the required 1 times. Success!
+
+test_lcbc001_fast_input[diskcache] passed 1 out of the required 1 times. Success!
+
+test_lcbc002_long_callback_running[diskcache] passed 1 out of the required 1 times. Success!
+
+test_lcbc003_long_callback_running_cancel[diskcache] passed 1 out of the required 1 times. Success!
+
+test_lcbc004_long_callback_progress[diskcache] passed 1 out of the required 1 times. Success!
+
+test_lcbc006_long_callback_caching_multi[diskcache] passed 1 out of the required 1 times. Success!
+
+test_lcbc007_validation_layout[diskcache] passed 1 out of the required 1 times. Success!
+
+test_lcbc016_multi_page_cancel[diskcache] passed 1 out of the required 1 times. Success!
+
+
+
+===End Flaky Test Report===
+
+============================== short test summary info ===============================
+
+SKIPPED [1] tests/integration/clientside/test_clientside_restarts.py:5: Hot-reload & clientside callbacks doesn't work properly
+
+SKIPPED [1] tests/integration/devtools/test_props_check.py:178: Flaky error on CI: https://github.com/plotly/dash/issues/2654
+
+SKIPPED [1] tests/integration/long_callback/test_basic_long_callback005.py:9: Timeout often
+
+SKIPPED [1] tests/integration/test_pages_redirect_home.py:6: Revisit later
+
+SKIPPED [1] tests/unit/library/test_grouped_callbacks.py:77: Empty output grouping is not valid
+
+SKIPPED [1] tests/unit/library/test_grouped_callbacks.py:84: Empty output grouping is not valid
+
+SKIPPED [1] tests/unit/library/test_grouped_callbacks.py:142: Empty input grouping is not valid
+
+SKIPPED [1] tests/unit/library/test_grouped_callbacks.py:149: Empty input grouping is not valid
+
+
+
+Results (2246.54s):
+
+     649 passed
+
+       1 failed
+
+         - tests/integration/test_integration.py:369 test_inin027_multi_page_without_pages_folder
+
+       8 skipped
+
